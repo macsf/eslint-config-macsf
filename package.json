@@ -1,0 +1,16 @@
+{
+  "name": "eslint-config-macsf",
+  "version": "0.1.0",
+  "description": "Personal eslintrc (macsf)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "macsf/eslintrc",
+  "author": "macsf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/macsf/eslintrc/issues"
+  },
+  "homepage": "https://github.com/macsf/eslintrc#readme"
+}
