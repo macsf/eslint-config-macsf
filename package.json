@@ -12,5 +12,14 @@
   "bugs": {
     "url": "https://github.com/macsf/eslintrc/issues"
   },
-  "homepage": "https://github.com/macsf/eslintrc#readme"
+  "homepage": "https://github.com/macsf/eslintrc#readme",
+  "dependencies": {
+    "babel-eslint": "^7.2.1",
+    "eslint": "^3.18.0",
+    "eslint-config-prettier": "^1.5.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-prettier": "^2.0.1",
+    "eslint-plugin-react": "^6.10.3",
+    "prettier": "^0.22.0"
+  }
 }
