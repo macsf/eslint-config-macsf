@@ -195,6 +195,7 @@ module.exports = {
     'prefer-template': 'warn',
     quotes: ['warn', 'single', { avoidEscape: true }],
     'rest-spread-spacing': ['error', 'never'],
+    semi: 'never',
     strict: 'off',
     'template-curly-spacing': ['error', 'never'],
     'vars-on-top': 'warn',
