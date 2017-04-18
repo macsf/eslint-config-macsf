@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-macsf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Personal eslintrc (macsf)",
   "main": "index.js",
   "scripts": {
