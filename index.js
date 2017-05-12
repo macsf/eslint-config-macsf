@@ -23,7 +23,7 @@ module.exports = {
     }
   },
   rules: {
-    'array-bracket-spacing': 'error',
+    'array-bracket-spacing': 'warn',
     'array-callback-return': 'warn',
     'arrow-body-style': ['warn', 'as-needed'],
     'arrow-parens': ['warn', 'as-needed'],
@@ -161,6 +161,7 @@ module.exports = {
       }
     ],
     'no-with': 'warn',
+    'object-curly-spacing': ['off', 'always'],
     'object-shorthand': [
       'error',
       'always',
