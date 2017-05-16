@@ -22,6 +22,9 @@ module.exports = {
       objectLiteralDuplicateProperties: false
     }
   },
+  ecmaFeatures: {
+    jsx: true
+  },
   rules: {
     'array-bracket-spacing': 'warn',
     'array-callback-return': 'warn',
@@ -218,6 +221,7 @@ module.exports = {
       {
         singleQuote: true,
         trailingComma: 'none',
+        jsxBracketSameLine: true,
         semi: false
       }
     ]

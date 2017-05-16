@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-macsf",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Personal eslintrc (macsf)",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "url": "https://github.com/macsf/eslintrc/issues"
   },
   "homepage": "https://github.com/macsf/eslintrc#readme",
-  "dependencies": {
+  "devDependencies": {
     "babel-eslint": "^7.2.3",
     "eslint": "^3.19.0",
     "eslint-config-prettier": "^2.0.0",
