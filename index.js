@@ -1,15 +1,17 @@
+/* @flow */
 module.exports = {
   env: {
     node: true,
     browser: true,
     es6: true
   },
-  plugins: ['import', 'react', 'jsx-a11y', 'prettier'],
+  plugins: ['import', 'react', 'jsx-a11y', 'prettier', 'babel', 'flowtype'],
   extends: [
     'eslint:recommended',
     'plugin:import/recommended',
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
+    'plugin:flowtype/recommended',
     'prettier',
     'prettier/react'
   ],
@@ -225,6 +227,14 @@ module.exports = {
         jsxBracketSameLine: true,
         semi: false
       }
-    ]
+    ],
+    'babel/generator-star-spacing': 'off',
+    'babel/new-cap': 'off',
+    'babel/array-bracket-spacing': 'off',
+    'babel/object-curly-spacing': 'off',
+    'babel/object-shorthand': 'off',
+    'babel/arrow-parens': 'off',
+    'babel/no-await-in-loop': 'off',
+    'flowtype/object-type-delimiter': ['warn', 'comma']
   }
 }
