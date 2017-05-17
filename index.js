@@ -4,11 +4,12 @@ module.exports = {
     browser: true,
     es6: true
   },
-  plugins: ['import', 'react', 'prettier'],
+  plugins: ['import', 'react', 'jsx-a11y', 'prettier'],
   extends: [
     'eslint:recommended',
     'plugin:import/recommended',
     'plugin:react/recommended',
+    'plugin:jsx-a11y/recommended',
     'prettier',
     'prettier/react'
   ],
