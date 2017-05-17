@@ -51,13 +51,7 @@ module.exports = {
     'array-bracket-spacing': ['warn', 'never'],
     'array-callback-return': 'warn',
     'arrow-body-style': ['warn', 'as-needed'],
-    'arrow-parens': [
-      'warn',
-      'as-needed',
-      {
-        requireForBlockBody: true
-      }
-    ],
+    'arrow-parens': ['warn', 'as-needed'],
     'arrow-spacing': [
       'error',
       {
