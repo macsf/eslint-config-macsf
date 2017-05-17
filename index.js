@@ -564,8 +564,7 @@ module.exports = {
     'react/jsx-closing-bracket-location': [
       'warn',
       {
-        // selfClosing: 'props-aligned',
-        selfClosing: 'after-props',
+        selfClosing: 'tag-aligned',
         nonEmpty: 'after-props'
       }
     ],
