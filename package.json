@@ -6,8 +6,20 @@
   "scripts": {
     "lint": "eslint --config .eslintrc ."
   },
-  "author": "macsf",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/macsf/eslint-config-macsf.git"
+  },
+  "author": "Sutthichok Wongthavorn (http://twitter.com/macsf)",
   "license": "MIT",
+  "keywords": [
+    "style guide",
+    "lint",
+    "es6",
+    "es2015",
+    "react",
+    "jsx"
+  ],
   "bugs": {
     "url": "https://github.com/macsf/eslintrc/issues"
   },
