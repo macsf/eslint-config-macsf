@@ -28,25 +28,129 @@ module.exports = {
   ecmaFeatures: {
     jsx: true
   },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.json']
+      }
+    },
+    'import/extensions': ['.js', '.jsx'],
+    'import/ignore': [
+      'node_modules',
+      '\\.(coffee|scss|css|less|hbs|svg|json)$'
+    ],
+    flowtype: {
+      onlyFilesWithFlowAnnotation: true
+    },
+    react: {
+      pragma: 'React',
+      version: '15.0'
+    }
+  },
   rules: {
-    'array-bracket-spacing': 'warn',
+    'array-bracket-spacing': ['warn', 'never'],
     'array-callback-return': 'warn',
     'arrow-body-style': ['warn', 'as-needed'],
-    'arrow-parens': ['warn', 'as-needed'],
-    'arrow-spacing': ['warn'],
+    'arrow-parens': [
+      'warn',
+      'as-needed',
+      {
+        requireForBlockBody: true
+      }
+    ],
+    'arrow-spacing': [
+      'error',
+      {
+        before: true,
+        after: true
+      }
+    ],
+    'block-scoped-var': 'warn',
+    'block-spacing': ['error', 'always'],
+    'brace-style': [
+      'error',
+      '1tbs',
+      {
+        allowSingleLine: true
+      }
+    ],
     camelcase: ['warn', { properties: 'never' }],
+    'class-methods-use-this': [
+      'off',
+      {
+        exceptMethods: [
+          'render',
+          'getInitialState',
+          'getDefaultProps',
+          'getChildContext',
+          'componentWillMount',
+          'componentDidMount',
+          'componentWillReceiveProps',
+          'shouldComponentUpdate',
+          'componentWillUpdate',
+          'componentDidUpdate',
+          'componentWillUnmount'
+        ]
+      }
+    ],
     'comma-dangle': ['error', 'never'],
     'comma-spacing': ['error', { before: false, after: true }],
     'comma-style': ['error', 'last'],
     complexity: ['off', 11],
+    'computed-property-spacing': ['off', 'never'],
+    'consistent-return': 'warn',
     curly: ['error', 'multi-line'],
-    'default-case': 'warn',
-    'dot-notation': 'warn',
+    'default-case': [
+      'error',
+      {
+        commentPattern: '^no default$'
+      }
+    ],
+    'dot-location': ['off', 'property'],
+    'dot-notation': [
+      'warn',
+      {
+        allowKeywords: true
+      }
+    ],
     'eol-last': ['error', 'always'],
-    eqeqeq: ['warn', 'always', { null: 'ignore' }],
-    'generator-star-spacing': ['warn'],
+    eqeqeq: ['error', 'always', { null: 'ignore' }],
+    'func-call-spacing': ['off', 'never'],
+    'func-name-matching': [
+      'off',
+      'always',
+      {
+        includeCommonJSModuleExports: false
+      }
+    ],
+    'func-names': 'warn',
+    'func-style': ['off', 'expression'],
+    'generator-star-spacing': [
+      'warn',
+      {
+        before: false,
+        after: true
+      }
+    ],
     'global-require': 'error',
-    'import/unambiguous': 'off',
+    'guard-for-in': 'warn',
+    indent: [
+      'warn',
+      2,
+      {
+        SwitchCase: 1,
+        VariableDeclarator: 1,
+        outerIIFEBody: 1,
+        FunctionDeclaration: {
+          parameters: 1,
+          body: 1
+        },
+        FunctionExpression: {
+          parameters: 1,
+          body: 1
+        }
+      }
+    ],
     'jsx-quotes': ['warn', 'prefer-double'],
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'keyword-spacing': [
@@ -61,11 +165,27 @@ module.exports = {
         }
       }
     ],
+    'line-comment-position': [
+      'off',
+      {
+        position: 'above',
+        ignorePattern: '',
+        applyDefaultPatterns: true
+      }
+    ],
     'linebreak-style': ['error', 'unix'],
+    'lines-around-comment': 'off',
+    'lines-around-directive': [
+      'off',
+      {
+        before: 'always',
+        after: 'always'
+      }
+    ],
     'max-depth': ['off', 4],
     'max-len': [
       'error',
-      100,
+      120,
       2,
       {
         ignoreUrls: true,
@@ -75,12 +195,56 @@ module.exports = {
         ignoreTemplateLiterals: true
       }
     ],
+    'max-lines': [
+      'off',
+      {
+        max: 300,
+        skipBlankLines: true,
+        skipComments: true
+      }
+    ],
+    'max-params': ['off', 3],
+    'max-statements': ['off', 10],
+    'max-statements-per-line': [
+      'off',
+      {
+        max: 1
+      }
+    ],
+    'multiline-ternary': ['off', 'never'],
+    'new-cap': [
+      'off',
+      {
+        newIsCap: true,
+        newIsCapExceptions: [],
+        capIsNew: false,
+        capIsNewExceptions: ['Immutable.Map', 'Immutable.Set', 'Immutable.List']
+      }
+    ],
+    'new-parens': 'off',
+    'newline-per-chained-call': [
+      'off',
+      {
+        ignoreChainWithDepth: 4
+      }
+    ],
     'no-alert': 'warn',
     'no-await-in-loop': 'warn',
+    'no-bitwise': 'warn',
+    'no-caller': 'warn',
     'no-confusing-arrow': ['warn', { allowParens: true }],
     'no-console': 'warn',
+    'no-constant-condition': 'warn',
+    'no-continue': 'warn',
     'no-else-return': 'warn',
-    'no-eq-null': 'warn',
+    'no-empty-function': [
+      'error',
+      {
+        allow: ['arrowFunctions', 'functions', 'methods']
+      }
+    ],
+    // 'no-eq-null': 'warn',
+    'no-eval': 'warn',
     'no-extra-parens': [
       'off',
       'all',
@@ -118,6 +282,7 @@ module.exports = {
     ],
     'no-mixed-spaces-and-tabs': 'error',
     'no-multiple-empty-lines': ['error', { max: 2, maxEOF: 1 }],
+    'no-multi-assign': ['error'],
     'no-multi-spaces': 'warn',
     'no-multi-str': 'warn',
     'no-nested-ternary': 'error',
@@ -127,13 +292,26 @@ module.exports = {
     'no-new': 'error',
     'no-octal-escape': 'warn',
     'no-path-concat': 'error',
+    'no-plusplus': 'warn',
     'no-proto': 'error',
     'no-restricted-syntax': [
       'error',
-      'ForInStatement',
-      'ForOfStatement',
-      'LabeledStatement',
-      'WithStatement'
+      {
+        selector: 'ForInStatement',
+        message: 'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.'
+      },
+      {
+        selector: 'ForOfStatement',
+        message: 'iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations.'
+      },
+      {
+        selector: 'LabeledStatement',
+        message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.'
+      },
+      {
+        selector: 'WithStatement',
+        message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.'
+      }
     ],
     'no-return-assign': 'error',
     'no-return-await': 'error',
@@ -143,7 +321,22 @@ module.exports = {
     'no-tabs': 'error',
     'no-template-curly-in-string': 'warn',
     'no-trailing-spaces': 'error',
+    'no-underscore-dangle': [
+      'error',
+      {
+        allowAfterThis: false
+      }
+    ],
     'no-unneeded-ternary': ['error', { defaultAssignment: false }],
+    'no-unused-expressions': [
+      'error',
+      {
+        allowShortCircuit: false,
+        allowTernary: false,
+        allowTaggedTemplates: false
+      }
+    ],
+    'no-use-before-define': 'error',
     'no-useless-computed-key': 'warn',
     'no-useless-constructor': 'warn',
     'no-useless-concat': 'warn',
@@ -179,6 +372,14 @@ module.exports = {
     'one-var-declaration-per-line': ['error', 'always'],
     'one-var': ['error', 'never'],
     'operator-assignment': ['error', 'always'],
+    'padded-blocks': [
+      'warn',
+      {
+        blocks: 'never',
+        classes: 'always',
+        switches: 'never'
+      }
+    ],
     'prefer-arrow-callback': [
       'error',
       { allowNamedFunctions: false, allowUnboundThis: true }
@@ -198,13 +399,86 @@ module.exports = {
       }
     ],
     'prefer-numeric-literals': 'warn',
+    'prefer-rest-params': 'warn',
     'prefer-spread': 'warn',
     'prefer-template': 'warn',
+    'quote-props': [
+      'warn',
+      'as-needed',
+      {
+        keywords: false,
+        unnecessary: true,
+        numbers: false
+      }
+    ],
     quotes: ['warn', 'single', { avoidEscape: true }],
     'rest-spread-spacing': ['error', 'never'],
     semi: ['warn', 'never'],
-    strict: 'off',
+    'semi-spacing': [
+      'error',
+      {
+        before: false,
+        after: true
+      }
+    ],
+    'sort-imports': [
+      'off',
+      {
+        ignoreCase: false,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
+      }
+    ],
+    'sort-keys': [
+      'off',
+      'asc',
+      {
+        caseSensitive: false,
+        natural: true
+      }
+    ],
+    'space-before-blocks': 'error',
+    'space-before-function-paren': [
+      'error',
+      {
+        anonymous: 'always',
+        named: 'never',
+        asyncArrow: 'always'
+      }
+    ],
+    'space-in-parens': ['error', 'never'],
+    'space-unary-ops': [
+      'error',
+      {
+        words: true,
+        nonwords: false,
+        overrides: {}
+      }
+    ],
+    'spaced-comment': [
+      'error',
+      'always',
+      {
+        line: {
+          exceptions: ['-', '+'],
+          markers: ['=', '!']
+        },
+        block: {
+          exceptions: ['-', '+'],
+          markers: ['=', '!'],
+          balanced: false
+        }
+      }
+    ],
+    strict: ['error', 'never'],
     'template-curly-spacing': ['error', 'never'],
+    'template-tag-spacing': ['off', 'never'],
+    'valid-typeof': [
+      'error',
+      {
+        requireStringLiterals: true
+      }
+    ],
     'vars-on-top': 'warn',
     'wrap-iife': [
       'error',
@@ -214,11 +488,153 @@ module.exports = {
       }
     ],
     yoda: 'error',
-    'react/sort-comp': 'error',
-    'react/prefer-es6-class': 'warn',
-    'react/jsx-handler-names': 'warn',
-    'react/jsx-boolean-value': ['warn', 'always'],
+    'import/default': 'off',
+    'import/export': 'error',
+    'import/extensions': [
+      'error',
+      'always',
+      {
+        js: 'never',
+        jsx: 'never'
+      }
+    ],
+    'import/first': ['warn', 'absolute-first'],
+    'import/named': 'off',
+    'import/namespace': 'off',
+    'import/newline-after-import': 'error',
+    'import/no-absolute-path': 'error',
+    'import/no-duplicates': 'warn',
+    'import/no-restricted-paths': 'off',
+    'import/no-unresolved': ['error', { commonjs: true, caseSensitive: true }],
+    'import/order': [
+      'off',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index'
+        ],
+        'newlines-between': 'never'
+      }
+    ],
+    'import/prefer-default-export': 'error',
+    'import/unambiguous': 'off',
+    'react/display-name': 'warn',
+    'react/forbid-prop-types': [
+      'error',
+      {
+        forbid: ['any', 'array', 'object']
+      }
+    ],
+    'react/no-unused-prop-types': [
+      'error',
+      {
+        customValidators: [],
+        skipShapeProps: true
+      }
+    ],
     'react/prefer-stateless-function': 'warn',
+    'react/prefer-es6-class': ['warn', 'always'],
+    'react/sort-comp': [
+      'error',
+      {
+        order: [
+          'static-methods',
+          'lifecycle',
+          '/^on.+$/',
+          '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
+          'everything-else',
+          '/^render.+$/',
+          'render'
+        ]
+      }
+    ],
+    'react/sort-prop-types': [
+      'off',
+      {
+        ignoreCase: true,
+        callbacksLast: false,
+        requiredFirst: false
+      }
+    ],
+    'react/jsx-boolean-value': ['warn', 'never'],
+    'react/jsx-closing-bracket-location': [
+      'warn',
+      {
+        // selfClosing: 'props-aligned',
+        selfClosing: 'after-props',
+        nonEmpty: 'after-props'
+      }
+    ],
+    'react/jsx-curly-spacing': [
+      'error',
+      'never',
+      {
+        allowMultiline: true
+      }
+    ],
+    'react/jsx-equals-spacing': ['error', 'never'],
+    'react/jsx-filename-extension': [
+      'error',
+      {
+        extensions: ['.jsx']
+      }
+    ],
+    'react/jsx-first-prop-new-line': ['warn', 'multiline-multiprop'],
+    'react/jsx-handler-names': [
+      'off',
+      { eventHandlerPrefix: 'handle', eventHandlerPropPrefix: 'on' }
+    ],
+    'react/jsx-indent': ['warn', 2],
+    'react/jsx-indent-props': ['warn', 2],
+    'react/jsx-key': 'off',
+    'react/jsx-no-bind': [
+      'error',
+      { ignoreRefs: true, allowArrowFunctions: true, allowBind: false }
+    ],
+    'react/jsx-no-duplicate-props': ['error', { ignoreCase: true }],
+    'react/jsx-no-literals': 'off',
+    'react/jsx-no-target-blank': 'error',
+    'react/jsx-max-props-per-line': [
+      'warn',
+      {
+        maximum: 1,
+        when: 'multiline'
+      }
+    ],
+    'react/jsx-sort-prop-types': 'off',
+    'react/jsx-sort-props': [
+      'off',
+      {
+        ignoreCase: true,
+        callbacksLast: false,
+        shorthandFirst: false,
+        shorthandLast: false,
+        noSortAlphabetically: false,
+        reservedFirst: true
+      }
+    ],
+    'react/jsx-space-before-closing': ['off', 'always'],
+    'react/jsx-tag-spacing': [
+      'error',
+      {
+        closingSlash: 'never',
+        beforeSelfClosing: 'always',
+        afterOpening: 'never'
+      }
+    ],
+    'react/jsx-wrap-multilines': [
+      'warn',
+      {
+        declaration: true,
+        assignment: true,
+        return: true,
+        arrow: true
+      }
+    ],
     'prettier/prettier': [
       'warn',
       {
