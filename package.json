@@ -4,9 +4,8 @@
   "description": "Personal eslintrc (macsf)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint --config .eslintrc ."
   },
-  "repository": "macsf/eslintrc",
   "author": "macsf",
   "license": "MIT",
   "bugs": {
