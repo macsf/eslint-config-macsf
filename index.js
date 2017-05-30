@@ -94,7 +94,7 @@ module.exports = {
     complexity: ['off', 11],
     'computed-property-spacing': ['off', 'never'],
     'consistent-return': 'warn',
-    curly: ['error', 'multi-line'],
+    curly: ['error', 'all'],
     'default-case': [
       'error',
       {
@@ -180,7 +180,7 @@ module.exports = {
     'max-depth': ['off', 4],
     'max-len': [
       'error',
-      120,
+      80,
       2,
       {
         ignoreUrls: true,
@@ -227,7 +227,7 @@ module.exports = {
     'no-await-in-loop': 'warn',
     'no-bitwise': 'warn',
     'no-caller': 'warn',
-    'no-confusing-arrow': ['warn', { allowParens: true }],
+    'no-confusing-arrow': ['warn'],
     'no-console': 'warn',
     'no-constant-condition': 'warn',
     'no-continue': 'warn',
@@ -398,7 +398,6 @@ module.exports = {
         numbers: false
       }
     ],
-    quotes: ['warn', 'single', { avoidEscape: true }],
     'rest-spread-spacing': ['error', 'never'],
     semi: ['warn', 'never'],
     'semi-spacing': [
