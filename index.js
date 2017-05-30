@@ -13,6 +13,7 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'plugin:flowtype/recommended',
     'prettier',
+    'prettier/flowtype',
     'prettier/react'
   ],
   parser: 'babel-eslint',
@@ -366,14 +367,6 @@ module.exports = {
     'one-var-declaration-per-line': ['error', 'always'],
     'one-var': ['error', 'never'],
     'operator-assignment': ['error', 'always'],
-    'padded-blocks': [
-      'warn',
-      {
-        blocks: 'never',
-        classes: 'always',
-        switches: 'never'
-      }
-    ],
     'prefer-arrow-callback': [
       'error',
       { allowNamedFunctions: false, allowUnboundThis: true }
