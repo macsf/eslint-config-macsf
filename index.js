@@ -35,7 +35,7 @@ module.exports = {
         extensions: ['.js', '.jsx', '.json']
       }
     },
-    'import/extensions': ['.js', '.jsx'],
+    'import/extensions': ['error', 'never'],
     'import/ignore': [
       'node_modules',
       '\\.(coffee|scss|css|less|hbs|svg|json)$'
@@ -49,26 +49,9 @@ module.exports = {
     }
   },
   rules: {
-    'array-bracket-spacing': ['warn', 'never'],
     'array-callback-return': 'warn',
     'arrow-body-style': ['warn', 'as-needed'],
-    'arrow-parens': ['warn', 'as-needed'],
-    'arrow-spacing': [
-      'error',
-      {
-        before: true,
-        after: true
-      }
-    ],
     'block-scoped-var': 'warn',
-    'block-spacing': ['error', 'always'],
-    'brace-style': [
-      'error',
-      '1tbs',
-      {
-        allowSingleLine: true
-      }
-    ],
     camelcase: ['warn', { properties: 'never' }],
     'class-methods-use-this': [
       'off',
@@ -88,9 +71,6 @@ module.exports = {
         ]
       }
     ],
-    'comma-dangle': ['error', 'never'],
-    'comma-spacing': ['error', { before: false, after: true }],
-    'comma-style': ['error', 'last'],
     complexity: ['off', 11],
     'computed-property-spacing': ['off', 'never'],
     'consistent-return': 'warn',
@@ -108,7 +88,6 @@ module.exports = {
         allowKeywords: true
       }
     ],
-    'eol-last': ['error', 'always'],
     eqeqeq: ['error', 'always', { null: 'ignore' }],
     'func-call-spacing': ['off', 'never'],
     'func-name-matching': [
@@ -118,48 +97,9 @@ module.exports = {
         includeCommonJSModuleExports: false
       }
     ],
-    'func-names': 'warn',
     'func-style': ['off', 'expression'],
-    'generator-star-spacing': [
-      'warn',
-      {
-        before: false,
-        after: true
-      }
-    ],
     'global-require': 'error',
     'guard-for-in': 'warn',
-    indent: [
-      'warn',
-      2,
-      {
-        SwitchCase: 1,
-        VariableDeclarator: 1,
-        outerIIFEBody: 1,
-        FunctionDeclaration: {
-          parameters: 1,
-          body: 1
-        },
-        FunctionExpression: {
-          parameters: 1,
-          body: 1
-        }
-      }
-    ],
-    'jsx-quotes': ['warn', 'prefer-double'],
-    'key-spacing': ['error', { beforeColon: false, afterColon: true }],
-    'keyword-spacing': [
-      'error',
-      {
-        before: true,
-        after: true,
-        overrides: {
-          return: { after: true },
-          throw: { after: true },
-          case: { after: true }
-        }
-      }
-    ],
     'line-comment-position': [
       'off',
       {
@@ -249,7 +189,6 @@ module.exports = {
         returnAssign: false
       }
     ],
-    'no-extra-semi': 'warn',
     'no-implicit-coercion': [
       'off',
       {
@@ -275,10 +214,7 @@ module.exports = {
         allowSamePrecedence: false
       }
     ],
-    'no-mixed-spaces-and-tabs': 'error',
-    'no-multiple-empty-lines': ['error', { max: 2, maxEOF: 1 }],
     'no-multi-assign': ['error'],
-    'no-multi-spaces': 'warn',
     'no-multi-str': 'warn',
     'no-nested-ternary': 'error',
     'no-new-func': 'error',
@@ -313,9 +249,7 @@ module.exports = {
     'no-script-url': 'error',
     'no-self-compare': 'error',
     'no-sequences': 'error',
-    'no-tabs': 'error',
     'no-template-curly-in-string': 'warn',
-    'no-trailing-spaces': 'error',
     'no-underscore-dangle': [
       'error',
       {
@@ -364,7 +298,6 @@ module.exports = {
         avoidQuotes: true
       }
     ],
-    'one-var-declaration-per-line': ['error', 'always'],
     'one-var': ['error', 'never'],
     'operator-assignment': ['error', 'always'],
     'prefer-arrow-callback': [
@@ -386,27 +319,9 @@ module.exports = {
       }
     ],
     'prefer-numeric-literals': 'warn',
-    'prefer-rest-params': 'warn',
+    'prefer-rest-params': 'off',
     'prefer-spread': 'warn',
     'prefer-template': 'warn',
-    'quote-props': [
-      'warn',
-      'as-needed',
-      {
-        keywords: false,
-        unnecessary: true,
-        numbers: false
-      }
-    ],
-    'rest-spread-spacing': ['error', 'never'],
-    semi: ['warn', 'never'],
-    'semi-spacing': [
-      'error',
-      {
-        before: false,
-        after: true
-      }
-    ],
     'sort-imports': [
       'off',
       {
@@ -421,24 +336,6 @@ module.exports = {
       {
         caseSensitive: false,
         natural: true
-      }
-    ],
-    'space-before-blocks': 'error',
-    'space-before-function-paren': [
-      'error',
-      {
-        anonymous: 'always',
-        named: 'never',
-        asyncArrow: 'always'
-      }
-    ],
-    'space-in-parens': ['error', 'never'],
-    'space-unary-ops': [
-      'error',
-      {
-        words: true,
-        nonwords: false,
-        overrides: {}
       }
     ],
     'spaced-comment': [
@@ -457,7 +354,6 @@ module.exports = {
       }
     ],
     strict: ['error', 'never'],
-    'template-curly-spacing': ['error', 'never'],
     'template-tag-spacing': ['off', 'never'],
     'valid-typeof': [
       'error',
@@ -466,13 +362,6 @@ module.exports = {
       }
     ],
     'vars-on-top': 'warn',
-    'wrap-iife': [
-      'error',
-      'outside',
-      {
-        functionPrototypeMethods: false
-      }
-    ],
     yoda: 'error',
     'import/default': 'off',
     'import/export': 'error',
@@ -547,34 +436,16 @@ module.exports = {
       }
     ],
     'react/jsx-boolean-value': ['warn', 'never'],
-    'react/jsx-closing-bracket-location': [
-      'warn',
-      {
-        selfClosing: 'tag-aligned',
-        nonEmpty: 'after-props'
-      }
-    ],
-    'react/jsx-curly-spacing': [
-      'error',
-      'never',
-      {
-        allowMultiline: true
-      }
-    ],
-    'react/jsx-equals-spacing': ['error', 'never'],
     'react/jsx-filename-extension': [
       'error',
       {
         extensions: ['.jsx']
       }
     ],
-    'react/jsx-first-prop-new-line': ['warn', 'multiline-multiprop'],
     'react/jsx-handler-names': [
       'off',
       { eventHandlerPrefix: 'handle', eventHandlerPropPrefix: 'on' }
     ],
-    'react/jsx-indent': ['warn', 2],
-    'react/jsx-indent-props': ['warn', 2],
     'react/jsx-key': 'off',
     'react/jsx-no-bind': [
       'error',
@@ -583,13 +454,6 @@ module.exports = {
     'react/jsx-no-duplicate-props': ['error', { ignoreCase: true }],
     'react/jsx-no-literals': 'off',
     'react/jsx-no-target-blank': 'error',
-    'react/jsx-max-props-per-line': [
-      'warn',
-      {
-        maximum: 1,
-        when: 'multiline'
-      }
-    ],
     'react/jsx-sort-prop-types': 'off',
     'react/jsx-sort-props': [
       'off',
@@ -603,23 +467,6 @@ module.exports = {
       }
     ],
     'react/jsx-space-before-closing': ['off', 'always'],
-    'react/jsx-tag-spacing': [
-      'error',
-      {
-        closingSlash: 'never',
-        beforeSelfClosing: 'always',
-        afterOpening: 'never'
-      }
-    ],
-    'react/jsx-wrap-multilines': [
-      'warn',
-      {
-        declaration: true,
-        assignment: true,
-        return: true,
-        arrow: true
-      }
-    ],
     'prettier/prettier': [
       'warn',
       {
@@ -635,7 +482,6 @@ module.exports = {
     'babel/object-curly-spacing': 'off',
     'babel/object-shorthand': 'off',
     'babel/arrow-parens': 'off',
-    'babel/no-await-in-loop': 'off',
-    'flowtype/object-type-delimiter': ['warn', 'comma']
+    'babel/no-await-in-loop': 'off'
   }
 }
