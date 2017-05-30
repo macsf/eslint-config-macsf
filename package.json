@@ -4,7 +4,8 @@
   "description": "Personal eslintrc (macsf)",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --config .eslintrc ."
+    "lint": "eslint --config .eslintrc . ",
+    "check-config": "npm run lint && eslint --config .eslintrc --print-config .eslintrc | eslint-config-prettier-check ; exit 0"
   },
   "repository": {
     "type": "git",
