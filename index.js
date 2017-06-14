@@ -26,9 +26,6 @@ module.exports = {
       objectLiteralDuplicateProperties: false
     }
   },
-  ecmaFeatures: {
-    jsx: true
-  },
   settings: {
     'import/resolver': {
       node: {
