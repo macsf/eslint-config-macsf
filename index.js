@@ -5,23 +5,19 @@ module.exports = {
     browser: true,
     es6: true
   },
-  plugins: ['import', 'react', 'jsx-a11y', 'prettier', 'babel', 'flowtype'],
+  plugins: ['import', 'prettier', 'babel', 'flowtype'],
   extends: [
     'eslint:recommended',
     'plugin:import/recommended',
-    'plugin:react/recommended',
-    'plugin:jsx-a11y/recommended',
     'plugin:flowtype/recommended',
     'prettier',
-    'prettier/flowtype',
-    'prettier/react'
+    'prettier/flowtype'
   ],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true,
       generators: false,
       objectLiteralDuplicateProperties: false
     }
@@ -29,7 +25,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.json']
+        extensions: ['.js', '.json']
       }
     },
     'import/extensions': ['error', 'never'],
@@ -226,19 +222,23 @@ module.exports = {
       'error',
       {
         selector: 'ForInStatement',
-        message: 'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.'
+        message:
+          'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.'
       },
       {
         selector: 'ForOfStatement',
-        message: 'iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations.'
+        message:
+          'iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations.'
       },
       {
         selector: 'LabeledStatement',
-        message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.'
+        message:
+          'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.'
       },
       {
         selector: 'WithStatement',
-        message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.'
+        message:
+          '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.'
       }
     ],
     'no-return-assign': 'error',
@@ -394,76 +394,6 @@ module.exports = {
     ],
     'import/prefer-default-export': 'error',
     'import/unambiguous': 'off',
-    'react/display-name': 'warn',
-    'react/forbid-prop-types': [
-      'error',
-      {
-        forbid: ['any', 'array', 'object']
-      }
-    ],
-    'react/no-unused-prop-types': [
-      'error',
-      {
-        customValidators: [],
-        skipShapeProps: true
-      }
-    ],
-    'react/prefer-stateless-function': 'warn',
-    'react/prefer-es6-class': ['warn', 'always'],
-    'react/sort-comp': [
-      'error',
-      {
-        order: [
-          'static-methods',
-          'lifecycle',
-          '/^on.+$/',
-          '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
-          'everything-else',
-          '/^render.+$/',
-          'render'
-        ]
-      }
-    ],
-    'react/sort-prop-types': [
-      'off',
-      {
-        ignoreCase: true,
-        callbacksLast: false,
-        requiredFirst: false
-      }
-    ],
-    'react/jsx-boolean-value': ['warn', 'never'],
-    'react/jsx-filename-extension': [
-      'error',
-      {
-        extensions: ['.jsx']
-      }
-    ],
-    'react/jsx-handler-names': [
-      'off',
-      { eventHandlerPrefix: 'handle', eventHandlerPropPrefix: 'on' }
-    ],
-    'react/jsx-key': 'off',
-    'react/jsx-no-bind': [
-      'error',
-      { ignoreRefs: true, allowArrowFunctions: true, allowBind: false }
-    ],
-    'react/jsx-no-duplicate-props': ['error', { ignoreCase: true }],
-    'react/jsx-no-literals': 'off',
-    'react/jsx-no-target-blank': 'error',
-    'react/jsx-sort-prop-types': 'off',
-    'react/jsx-sort-props': [
-      'off',
-      {
-        ignoreCase: true,
-        callbacksLast: false,
-        shorthandFirst: false,
-        shorthandLast: false,
-        noSortAlphabetically: false,
-        reservedFirst: true
-      }
-    ],
-    'react/jsx-space-before-closing': ['off', 'always'],
     'prettier/prettier': [
       'warn',
       {
