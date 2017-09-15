@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --config .eslintrc . ",
-    "check-config": "npm run lint && eslint --config .eslintrc --print-config .eslintrc | eslint-config-prettier-check ; exit 0"
+    "check-config":
+      "npm run lint && eslint --config .eslintrc --print-config .eslintrc | eslint-config-prettier-check ; exit 0"
   },
   "repository": {
     "type": "git",
@@ -25,12 +26,10 @@
     "eslint-plugin-prettier": "^2.2.0"
   },
   "devDependencies": {
-    "babel-eslint": "^8.0.0",
     "eslint": "^4.6.1",
     "prettier": "^1.6.1"
   },
   "peerDependencies": {
-    "babel-eslint": "^8.0.0",
     "eslint": "^4.6.1",
     "prettier": "^1.6.1"
   }
