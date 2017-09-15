@@ -5,14 +5,8 @@ module.exports = {
     browser: true,
     es6: true
   },
-  plugins: ['import', 'prettier', 'babel', 'flowtype'],
-  extends: [
-    'eslint:recommended',
-    'plugin:import/recommended',
-    'plugin:flowtype/recommended',
-    'prettier',
-    'prettier/flowtype'
-  ],
+  plugins: ['import', 'prettier', 'babel'],
+  extends: ['eslint:recommended', 'plugin:import/recommended', 'prettier'],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 6,

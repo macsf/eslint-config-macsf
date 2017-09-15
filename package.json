@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --config .eslintrc . ",
-    "check-config": "npm run lint && eslint --config .eslintrc --print-config .eslintrc | eslint-config-prettier-check ; exit 0"
+    "check-config":
+      "npm run lint && eslint --config .eslintrc --print-config .eslintrc | eslint-config-prettier-check ; exit 0"
   },
   "repository": {
     "type": "git",
@@ -13,24 +14,20 @@
   },
   "author": "Sutthichok Wongthavorn (http://twitter.com/macsf)",
   "license": "MIT",
-  "keywords": [
-    "style guide",
-    "lint",
-    "es6",
-    "es2015"
-  ],
+  "keywords": ["style guide", "lint", "es6", "es2015"],
   "bugs": {
     "url": "https://github.com/macsf/eslintrc/issues"
   },
   "homepage": "https://github.com/macsf/eslintrc#readme",
-  "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "eslint": "^4.6.1",
+  "dependencies": {
     "eslint-config-prettier": "^2.4.0",
     "eslint-plugin-babel": "^4.1.2",
-    "eslint-plugin-flowtype": "^2.35.1",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-prettier": "^2.2.0",
+    "eslint-plugin-prettier": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.0",
+    "eslint": "^4.6.1",
     "prettier": "^1.6.1"
   }
 }
