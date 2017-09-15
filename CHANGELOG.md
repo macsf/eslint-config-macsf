@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.1.1
+- Add peerDependencies. Make sure everything is installed.
+
 ### 1.1.0
 
 - Reconfigure so local plugins and configurations are not need.
