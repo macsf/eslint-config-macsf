@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.1.0
+
+- Reconfigure so local plugins and configurations are not need.
+
 ### 1.0.9
 
 - Remove React linting.
