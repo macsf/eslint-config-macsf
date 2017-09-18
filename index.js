@@ -5,25 +5,39 @@ module.exports = {
     es6: true,
     commonjs: true
   },
-  plugins: ['import', 'prettier', 'babel'],
-  extends: ['eslint:recommended', 'plugin:import/recommended', 'prettier'],
+  plugins: ['import', 'babel', 'react', 'jsx-a11y', 'prettier'],
+  extends: [
+    'eslint:recommended',
+    'plugin:import/recommended',
+    'plugin:react/recommended',
+    'prettier',
+    'prettier/react'
+  ],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
     ecmaFeatures: {
       generators: false,
-      objectLiteralDuplicateProperties: false
+      objectLiteralDuplicateProperties: false,
+      jsx: true
     }
   },
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.json']
+        extensions: ['.js', '.json', 'jsx']
       }
     },
     'import/extensions': ['error', 'never'],
-    'import/ignore': ['node_modules', '\\.(coffee|scss|css|less|hbs|svg|json)$']
+    'import/ignore': [
+      'node_modules',
+      '\\.(coffee|scss|css|less|hbs|svg|json)$'
+    ],
+    react: {
+      pragma: 'React',
+      version: '15.0'
+    }
   },
   rules: {
     'array-callback-return': 'warn',
@@ -393,6 +407,77 @@ module.exports = {
     'babel/object-curly-spacing': 'off',
     'babel/object-shorthand': 'off',
     'babel/arrow-parens': 'off',
-    'babel/no-await-in-loop': 'off'
+    'babel/no-await-in-loop': 'off',
+    'react/display-name': 'warn',
+    'react/forbid-prop-types': [
+      'error',
+      {
+        forbid: ['any', 'array', 'object']
+      }
+    ],
+    'react/no-unused-prop-types': [
+      'error',
+      {
+        customValidators: [],
+        skipShapeProps: true
+      }
+    ],
+    'react/prefer-stateless-function': 'warn',
+    'react/prefer-es6-class': ['warn', 'always'],
+    'react/sort-comp': [
+      'error',
+      {
+        order: [
+          'static-methods',
+          'lifecycle',
+          '/^on.+$/',
+          '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
+          'everything-else',
+          '/^render.+$/',
+          'render'
+        ]
+      }
+    ],
+    'react/sort-prop-types': [
+      'off',
+      {
+        ignoreCase: true,
+        callbacksLast: false,
+        requiredFirst: false
+      }
+    ],
+    'react/jsx-boolean-value': ['warn', 'never'],
+    'react/jsx-closing-bracket-location': ['warn', 'after-props'],
+    'react/jsx-filename-extension': [
+      'error',
+      {
+        extensions: ['.jsx']
+      }
+    ],
+    'react/jsx-handler-names': [
+      'off',
+      { eventHandlerPrefix: 'handle', eventHandlerPropPrefix: 'on' }
+    ],
+    'react/jsx-key': 'off',
+    'react/jsx-no-bind': [
+      'error',
+      { ignoreRefs: true, allowArrowFunctions: true, allowBind: false }
+    ],
+    'react/jsx-no-duplicate-props': ['error', { ignoreCase: true }],
+    'react/jsx-no-literals': 'off',
+    'react/jsx-no-target-blank': 'error',
+    'react/jsx-sort-prop-types': 'off',
+    'react/jsx-sort-props': [
+      'off',
+      {
+        ignoreCase: true,
+        callbacksLast: false,
+        shorthandFirst: false,
+        shorthandLast: false,
+        noSortAlphabetically: false,
+        reservedFirst: true
+      }
+    ],
+    'react/jsx-space-before-closing': ['off', 'always']
   }
 }

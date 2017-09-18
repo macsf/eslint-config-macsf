@@ -14,7 +14,7 @@
   },
   "author": "Sutthichok Wongthavorn (http://twitter.com/macsf)",
   "license": "MIT",
-  "keywords": ["style guide", "lint", "es6", "es2015"],
+  "keywords": ["style guide", "lint", "es6", "es2015", "react", "jsx"],
   "bugs": {
     "url": "https://github.com/macsf/eslintrc/issues"
   },
@@ -24,7 +24,9 @@
     "eslint-config-prettier": "^2.4.0",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-prettier": "^2.2.0"
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.2.0",
+    "eslint-plugin-react": "^7.3.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.0",
