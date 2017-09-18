@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.2
+
+- Add babel-eslint back.
+
 ### 1.1.1
 - Add peerDependencies. Make sure everything is installed.
 
