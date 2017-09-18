@@ -398,7 +398,7 @@ module.exports = {
         singleQuote: true,
         trailingComma: 'none',
         jsxBracketSameLine: true,
-        semi: false
+        semi: true
       }
     ],
     'babel/generator-star-spacing': 'off',
@@ -447,13 +447,14 @@ module.exports = {
       }
     ],
     'react/jsx-boolean-value': ['warn', 'never'],
-    'react/jsx-closing-bracket-location': ['warn', 'after-props'],
-    'react/jsx-filename-extension': [
-      'error',
+    'react/jsx-closing-bracket-location': [
+      'on',
       {
-        extensions: ['.jsx']
+        selfClosing: 'tag-aligned',
+        nonEmpty: 'after-props'
       }
     ],
+    'react/jsx-filename-extension': 0,
     'react/jsx-handler-names': [
       'off',
       { eventHandlerPrefix: 'handle', eventHandlerPropPrefix: 'on' }
