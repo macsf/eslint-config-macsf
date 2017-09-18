@@ -448,7 +448,7 @@ module.exports = {
     ],
     'react/jsx-boolean-value': ['warn', 'never'],
     'react/jsx-closing-bracket-location': [
-      'on',
+      1,
       {
         selfClosing: 'tag-aligned',
         nonEmpty: 'after-props'
