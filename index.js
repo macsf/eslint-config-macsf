@@ -3,7 +3,8 @@ module.exports = {
   env: {
     node: true,
     browser: true,
-    es6: true
+    es6: true,
+    commonjs: true
   },
   plugins: ['import', 'prettier', 'babel'],
   extends: ['eslint:recommended', 'plugin:import/recommended', 'prettier'],
