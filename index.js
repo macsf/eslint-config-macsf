@@ -1,4 +1,3 @@
-/* @flow */
 module.exports = {
   env: {
     node: true,
@@ -23,17 +22,7 @@ module.exports = {
       }
     },
     'import/extensions': ['error', 'never'],
-    'import/ignore': [
-      'node_modules',
-      '\\.(coffee|scss|css|less|hbs|svg|json)$'
-    ],
-    flowtype: {
-      onlyFilesWithFlowAnnotation: true
-    },
-    react: {
-      pragma: 'React',
-      version: '15.0'
-    }
+    'import/ignore': ['node_modules', '\\.(coffee|scss|css|less|hbs|svg|json)$']
   },
   rules: {
     'array-callback-return': 'warn',
