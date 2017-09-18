@@ -448,13 +448,13 @@ module.exports = {
     ],
     'react/jsx-boolean-value': ['warn', 'never'],
     'react/jsx-closing-bracket-location': [
-      1,
+      'warn',
       {
         selfClosing: 'tag-aligned',
         nonEmpty: 'after-props'
       }
     ],
-    'react/jsx-filename-extension': 0,
+    'react/jsx-filename-extension': ['error', { extensions: ['.js'] }],
     'react/jsx-handler-names': [
       'off',
       { eventHandlerPrefix: 'handle', eventHandlerPropPrefix: 'on' }
