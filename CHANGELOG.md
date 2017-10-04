@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.3
+- Merge react branch into master
+- Update packages
+- Remove default prettier configuration.
+- Cleanup react linting configuration.
+
 ### 1.2
 - Add React specific configurations.
 
