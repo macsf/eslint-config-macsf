@@ -395,10 +395,7 @@ module.exports = {
     'prettier/prettier': [
       'warn',
       {
-        singleQuote: true,
-        trailingComma: 'none',
-        jsxBracketSameLine: true,
-        semi: true
+        singleQuote: true
       }
     ],
     'babel/generator-star-spacing': 'off',
