@@ -1,8 +1,7 @@
 # Changelog
 
 ### 1.2
-
-- Add babel-eslint back.
+- Add React specific configurations.
 
 ### 1.1.1
 - Add peerDependencies. Make sure everything is installed.
