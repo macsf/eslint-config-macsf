@@ -405,45 +405,32 @@ module.exports = {
     'babel/object-shorthand': 'off',
     'babel/arrow-parens': 'off',
     'babel/no-await-in-loop': 'off',
-    'react/display-name': 'warn',
-    'react/forbid-prop-types': [
-      'error',
-      {
-        forbid: ['any', 'array', 'object']
-      }
-    ],
-    'react/no-unused-prop-types': [
-      'error',
-      {
-        customValidators: [],
-        skipShapeProps: true
-      }
-    ],
+    'react/prop-types': 'off',
     'react/prefer-stateless-function': 'warn',
     'react/prefer-es6-class': ['warn', 'always'],
     'react/sort-comp': [
-      'error',
+      'warn',
       {
         order: [
           'static-methods',
           'lifecycle',
           '/^on.+$/',
-          '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
           'everything-else',
-          '/^render.+$/',
-          'render'
-        ]
+          'rendering'
+        ],
+        groups: {
+          rendering: ['/^render.+$/', 'render']
+        }
       }
     ],
     'react/sort-prop-types': [
-      'off',
+      'warn',
       {
         ignoreCase: true,
-        callbacksLast: false,
-        requiredFirst: false
+        callbacksLast: true,
+        requiredFirst: true
       }
     ],
-    'react/jsx-boolean-value': ['warn', 'never'],
     'react/jsx-closing-bracket-location': [
       'warn',
       {
@@ -456,26 +443,16 @@ module.exports = {
       'off',
       { eventHandlerPrefix: 'handle', eventHandlerPropPrefix: 'on' }
     ],
-    'react/jsx-key': 'off',
-    'react/jsx-no-bind': [
-      'error',
-      { ignoreRefs: true, allowArrowFunctions: true, allowBind: false }
-    ],
-    'react/jsx-no-duplicate-props': ['error', { ignoreCase: true }],
-    'react/jsx-no-literals': 'off',
-    'react/jsx-no-target-blank': 'error',
-    'react/jsx-sort-prop-types': 'off',
     'react/jsx-sort-props': [
       'off',
       {
         ignoreCase: true,
-        callbacksLast: false,
+        callbacksLast: true,
         shorthandFirst: false,
-        shorthandLast: false,
-        noSortAlphabetically: false,
+        shorthandLast: true,
+        noSortAlphabetically: true,
         reservedFirst: true
       }
-    ],
-    'react/jsx-space-before-closing': ['off', 'always']
+    ]
   }
 }
