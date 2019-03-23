@@ -1,40 +1,56 @@
 {
   "name": "eslint-config-macsf",
-  "version": "1.3.1",
+  "version": "1.4",
   "description": "Personal eslintrc (macsf)",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --config .eslintrc . ",
-    "check-config":
-      "npm run lint && eslint --config .eslintrc --print-config .eslintrc | eslint-config-prettier-check ; exit 0"
+    "lint": "eslint . ",
+    "lint:fix": "eslint . --fix",
+    "check-config": "npm run lint && eslint --config .eslintrc --print-config .eslintrc | eslint-config-prettier-check ; exit 0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/macsf/eslint-config-macsf.git"
+    "url": "https://gitlab.com/macsf/eslint-config-macsf.git"
   },
   "author": "Sutthichok Wongthavorn (http://twitter.com/macsf)",
   "license": "MIT",
-  "keywords": ["style guide", "lint", "es6", "es2015", "react", "jsx"],
+  "keywords": [
+    "eslint",
+    "javascript",
+    "jsx",
+    "lint",
+    "prettier",
+    "react",
+    "style guide"
+  ],
   "bugs": {
-    "url": "https://github.com/macsf/eslintrc/issues"
+    "url": "https://gitlab.com/macsf/eslintrc/issues"
   },
-  "homepage": "https://github.com/macsf/eslintrc#readme",
-  "dependencies": {
-    "eslint-config-prettier": "^3.3.0",
-    "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-react": "^7.11.1"
-  },
+  "homepage": "https://gitlab.com/macsf/eslintrc#readme",
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.9.0",
-    "prettier": "^1.15.2"
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-html": "^5.0.3",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "prettier": "^1.16.4"
   },
   "peerDependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.9.0",
-    "prettier": "^1.15.2"
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-html": "^5.0.3",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "prettier": "^1.16.4"
   }
 }
